@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Game of Thrones</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_503612_lx6jfw7hb8v0lik9.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    a {
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+    /* common css */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .button {
+      display: inline-block;
+      font-size: 32px;
+      color: #fff;
+      background-color: #f7ba3e;
+      padding: 5px 36px;
+      border-radius: 5px;
+      opacity: .8;
+    }
+    .button:hover {
+      opacity: 1;
+    }
+    .layout {
+      width: 900px;
+      margin: 0 auto;
+    }
+    body {
+      font: 14px/1.5 Arial;
+      background-color: #eee;
+      color: #444;
+    }
+    html, body {
+      height: 100%;
+    }
+    header {
+      position: relative;
+      height: 100%;
+      min-height: 600px;
+      background: #000 url(img/首页2.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    header::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(255, 255, 255, .08);
+      z-index: -1;
+    }
+    header .logo {
+      color: #f7ba3e;
+      font-size: 32px;
+      float: left;
+      margin-top: 10px;
+      /* position: absolute;
+      top: 30px;
+      left: 30px; */
+    }
+    header .nav {
+      float: right;
+    }
+    header .nav >li {
+      float: left;
+      margin: 10px;
+    }
+    header .nav a { 
+      display: block;
+      padding: 5px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+    }
+    header .nav a:hover {
+      background-color: #ca4406;
+    }
+    header .intro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+    header .intro h1 {
+      font-size: 41px;
+    }
+    header .intro h2 {
+      font-size: 47px;
+      margin-top: 20px;
+    }
+    header .intro .button {
+      margin-top: 20px;
+    }
+    section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    section > h2 {
+      font-size: 40px;
+    }
+    section > p {
+      font-size: 10px;
+    }
+    section > ul .iconfont {
+      font-size: 60px;
+    }
+    section .family-intro > li {
+      float: left;
+      width: 33.33%;
+      padding: 10px 20px;
+    }
+    section > ul p {
+      margin-top: 10px;
+    }
+    section .family figure {
+      width: calc(33.33% - 20px);
+      height: 270px;
+      margin: 10px;
+      float: left;
+    }
+    section .family a {
+      display: block;
+      height: 200px;
+    }
+    section .family img {
+      width: 100%;
+      height: 100%;
+    }
+    section .family figcaption {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    section .family p {
+      color: #666;
+      margin-top: 10px;
+    }
+    section .timeline img {
+      width: 100px;
+      height: 100px;
+      border: 3px solid lightblue;
+      border-radius: 50%;
+    }
+    section .timeline > li:nth-child(odd) {
+      margin-top: 20px;
+      padding-right: calc(50% - 50px);
+      text-align: right;
+    }
+    section .timeline > li:nth-child(odd) img{
+      float: right;
+    }
+    section .timeline > li::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    section .timeline dl{
+      margin-right: 130px;
+    }
+    section .timeline > li:nth-child(even) {
+      margin-top: 20px;
+      padding-left: calc(50% - 50px);
+      text-align: left;
+    }
+    section .timeline > li:nth-child(even) img{
+      float: left;
+    }
+    section .timeline li:nth-child(even) dl{
+      margin-left: 130px;
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 导航 -->
+      <div class="navbar layout clearfix">
+        <a href="#" class="logo">Game of Thrones</a>
+        <ul class="nav">
+          <li><a href="#">SERVICE</a></li>
+          <li><a href="#">FAMILY</a></li>
+          <li><a href="#">CHARACTER</a></li>
+          <li><a href="#">TEAM</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="intro layout">
+        <h1>WINTER IS COMING.</h1>
+        <h2>ALONE WOLF DEATH, WOLVES LIVE.</h2>
+        <a href="#" class="button">Tell me more</a>
+      </div>
+  </header>
+  <main class="layout">
+    <section>
+      <h2>家族介绍</h2>
+      <p>关于各个家族的介绍</p>
+      <ul class="family-intro clearfix">
+        <li>
+          <span class="iconfont icon-family1"></span>
+          <h3>史塔克家族</h3>
+          <p>
+            北境的统治家族。原本无意参与南方的权力斗争，
+            但由于劳勃的邀请和奈德后来的悲剧，
+            该家族被拖入了斗争旋涡中。
+          </p>
+        </li>
+        <li>
+          <span class="iconfont icon-family3"></span>
+          <h3>提利尔家族</h3>
+          <p>河湾地的统治家族。由于是新晋贵族，遭人鄙视，所以不惜一切代价也要挤进中央朝廷。</p>
+        </li>
+        <li>
+          <span class="iconfont icon-family2"></span>
+          <h3>艾林家族</h3>
+          <p>谷地的统治家族。遵照凯特琳之妹莱莎的意愿保持中立，后来其属下各封臣被小指头分化收编。</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>家族徽章</h2>
+      <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~家族徽章~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+      <div class="family clearfix">
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+        <figure>
+          <a href="#">
+            <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E5%AE%B6.jpg" alt="">
+          </a>
+          <figcaption>
+              King's landing:House Targaryen
+          </figcaption>
+          <p>
+              Fire and Blood
+          </p>
+        </figure>
+      </div>
+    </section>
+    <section>
+      <h2>Timeline</h2>
+      <p>故事的发展曲线</p>
+      <ul class="timeline">
+        <li>
+          <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E6%AF%8D.jpg" alt="">
+          <dl>
+            <dt>Daenerys Targaryen</dt>
+            <dd>艾米莉亚·克拉克饰</dd>
+            <dd>
+              丹妮莉丝·坦格利安（Daenerys Targaryen），
+              也被称作“风暴降生”丹妮莉丝或者丹妮，是古老的坦格利安王朝最后的传人。
+              她在童年时一直作为他人政治砝码，直到嫁给卓戈卡奥后，逐渐成长为一个令人敬畏的女王和奴隶解放者。
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E6%AF%8D.jpg" alt="">
+          <dl>
+            <dt>Daenerys Targaryen</dt>
+            <dd>艾米莉亚·克拉克饰</dd>
+            <dd>
+              丹妮莉丝·坦格利安（Daenerys Targaryen），
+              也被称作“风暴降生”丹妮莉丝或者丹妮，是古老的坦格利安王朝最后的传人。
+              她在童年时一直作为他人政治砝码，直到嫁给卓戈卡奥后，逐渐成长为一个令人敬畏的女王和奴隶解放者。
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E6%AF%8D.jpg" alt="">
+          <dl>
+            <dt>Daenerys Targaryen</dt>
+            <dd>艾米莉亚·克拉克饰</dd>
+            <dd>
+              丹妮莉丝·坦格利安（Daenerys Targaryen），
+              也被称作“风暴降生”丹妮莉丝或者丹妮，是古老的坦格利安王朝最后的传人。
+              她在童年时一直作为他人政治砝码，直到嫁给卓戈卡奥后，逐渐成长为一个令人敬畏的女王和奴隶解放者。
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E6%AF%8D.jpg" alt="">
+          <dl>
+            <dt>Daenerys Targaryen</dt>
+            <dd>艾米莉亚·克拉克饰</dd>
+            <dd>
+              丹妮莉丝·坦格利安（Daenerys Targaryen），
+              也被称作“风暴降生”丹妮莉丝或者丹妮，是古老的坦格利安王朝最后的传人。
+              她在童年时一直作为他人政治砝码，直到嫁给卓戈卡奥后，逐渐成长为一个令人敬畏的女王和奴隶解放者。
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <img src="https://chenleoxx.github.io/demos/companypage/images/%E9%BE%99%E6%AF%8D.jpg" alt="">
+          <dl>
+            <dt>Daenerys Targaryen</dt>
+            <dd>艾米莉亚·克拉克饰</dd>
+            <dd>
+              丹妮莉丝·坦格利安（Daenerys Targaryen），
+              也被称作“风暴降生”丹妮莉丝或者丹妮，是古老的坦格利安王朝最后的传人。
+              她在童年时一直作为他人政治砝码，直到嫁给卓戈卡奥后，逐渐成长为一个令人敬畏的女王和奴隶解放者。
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </section>
+    <section></section>
+    <section></section>
+  </main>
+  <footer></footer>
+</body>
+</html>
